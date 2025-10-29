@@ -1,6 +1,6 @@
 
 
-import React from 'react'
+
 
 const PHONE_1 = '+918708630236'
 const PHONE_2 = '+919671798170'
