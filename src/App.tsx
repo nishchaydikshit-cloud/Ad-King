@@ -116,28 +116,31 @@ function Pricing(){
   )
 }
 
-function Contact(){
+function Contact() {
   // Mailto form — builds a mailto link so the user's email client opens with prefilled content.
-  const handleMailTo = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleMailTo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.target
-    const name = form.name.value.trim()
-    const phone = form.phone.value.trim()
-    const service = form.service.value
-    const message = form.message.value.trim()
 
-    const subject = encodeURIComponent(`${AGENCY} - New enquiry from ${name || 'Prospect'}`)
+    const form = e.currentTarget; // ✅ use currentTarget, properly typed
+
+    // ✅ safely access form inputs using 'elements'
+    const name = (form.elements.namedItem('name') as HTMLInputElement)?.value.trim() || '';
+    const phone = (form.elements.namedItem('phone') as HTMLInputElement)?.value.trim() || '';
+    const service = (form.elements.namedItem('service') as HTMLInputElement)?.value.trim() || '';
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value.trim() || '';
+
+    const subject = encodeURIComponent(`${AGENCY} - New enquiry from ${name || 'Prospect'}`);
     const bodyLines = [
       `Name: ${name}`,
       `Phone: ${phone}`,
       `Service: ${service}`,
       `Message: ${message}`,
-    ]
-    const body = encodeURIComponent(bodyLines.join('\n'))
-    const mailto = `mailto:${EMAIL}?subject=${subject}&body=${body}`
-    window.location.href = mailto
-  }
+    ];
+    const body = encodeURIComponent(bodyLines.join('\n'));
 
+    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+  };
+  
   return (
     <section id="contact" className="py-16 bg-gray-900 text-white">
       <div className="max-w-4xl mx-auto px-6">
