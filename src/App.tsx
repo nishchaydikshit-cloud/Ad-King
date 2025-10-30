@@ -1,7 +1,3 @@
-
-
-
-
 const PHONE_1 = '+918708630236'
 const PHONE_2 = '+919671798170'
 const EMAIL = 'adkingrohtak@gmail.com'
