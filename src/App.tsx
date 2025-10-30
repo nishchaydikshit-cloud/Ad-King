@@ -140,41 +140,25 @@ function Contact() {
 
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
   };
-  
+
   return (
     <section id="contact" className="py-16 bg-gray-900 text-white">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-6">Contact & Enquiry</h2>
-        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-          <form onSubmit={handleMailTo} className="grid gap-4">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <input name="name" placeholder="Your name" required className="p-3 rounded bg-gray-900 border border-gray-700" />
-              <input name="phone" placeholder="Phone" required className="p-3 rounded bg-gray-900 border border-gray-700" />
-            </div>
-            <select name="service" className="p-3 rounded bg-gray-900 border border-gray-700">
-              <option>Newspaper Ads</option>
-              <option>Magazine Ads</option>
-              <option>Classifieds (Name change, Notices)</option>
-              <option>Pamphlet Design</option>
-              <option>Bulk Printing</option>
-            </select>
-            <textarea name="message" rows="4" placeholder="Short message / requirements" className="p-3 rounded bg-gray-900 border border-gray-700" />
-            <div className="flex gap-3 items-center">
-              <button type="submit" className="bg-green-500 text-white px-6 py-3 rounded font-semibold">Send Email</button>
-              <a className="inline-block" href={`https://wa.me/${PHONE_1.replace('+','')}`} target="_blank" rel="noreferrer">Or chat on WhatsApp</a>
-            </div>
-          </form>
-        </div>
-
-        <div className="mt-6 text-gray-400">
-          <p>Phone: {PHONE_1} | {PHONE_2}</p>
-          <p>Email: {EMAIL}</p>
-          <p>Address: Rohtak, Haryana</p>
-        </div>
+      <div className="max-w-3xl mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-8 text-center">Contact Us</h2>
+        <form onSubmit={handleMailTo} className="grid gap-4">
+          <input type="text" name="name" placeholder="Your Name" className="p-3 rounded text-black" required />
+          <input type="tel" name="phone" placeholder="Phone Number" className="p-3 rounded text-black" required />
+          <input type="text" name="service" placeholder="Service Interested In" className="p-3 rounded text-black" required />
+          <textarea name="message" placeholder="Your Message" className="p-3 rounded text-black" required />
+          <button type="submit" className="bg-blue-600 hover:bg-blue-700 p-3 rounded text-white font-semibold">
+            Send Enquiry
+          </button>
+        </form>
       </div>
     </section>
-  )
+  );
 }
+
 
 function Footer(){
   return (
