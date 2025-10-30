@@ -118,7 +118,7 @@ function Pricing(){
 
 function Contact(){
   // Mailto form — builds a mailto link so the user's email client opens with prefilled content.
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleMailTo = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const form = e.target
     const name = form.name.value.trim()
