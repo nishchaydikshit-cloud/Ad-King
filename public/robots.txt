@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /node_modules/
-Disallow: /src/
 
-Sitemap: https://www.adkingadvertisers.digital/sitemap.xml
+Sitemap: https://adkingadvertisers.digital/sitemap.xml
