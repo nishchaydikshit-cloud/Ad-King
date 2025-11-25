@@ -113,15 +113,6 @@ function Hero() {
   </ul>
 </section>
 
-<section id="contact">
-  <h2>Get Your Print Media Quote</h2>
-  <p>Tell us your budget, preferred publications or outdoor sites — we’ll plan the best mix and send a detailed estimate.</p>
-
-  <p><strong>Call:</strong> +91 8708630236 | +91 9671798170</p>
-  <p><strong>Email:</strong> adkingrohtak@gmail.com</p>
-  <a class="btn-primary" href="https://wa.me/918708630236" target="_blank">Chat on WhatsApp</a>
-</section>
-
 
 function Portfolio(){
   return (
