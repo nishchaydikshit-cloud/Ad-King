@@ -1,244 +1,479 @@
+import React from "react";
 
-
-
-
-const PHONE_1 = '+918708630236'
-const PHONE_2 = '+919671798170'
-const EMAIL = 'adkingrohtak@gmail.com'
-const AGENCY = 'AD KING ADVERTISERS'
-const TAGLINE = 'Reach more people'
-const LOCATION = 'Rohtak (Haryana)'
-
-function Hero() {
+export default function App() {
   return (
-    <header className="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-      <div className="max-w-6xl mx-auto px-6 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
-          
-          {/* LEFT SIDE */}
+    <div className="bg-black text-white">
+
+      {/* ================= HERO SECTION ================= */}
+      <section className="min-h-screen flex items-center justify-center px-6">
+        <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
+
+          {/* LEFT CONTENT */}
           <div>
-            <h1 className="text-4xl lg:text-6xl font-extrabold">
-              Premium Print Media Advertising
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              India’s Trusted <span className="text-yellow-500">Print Media</span><br />
+              Advertising Agency
             </h1>
 
-            <p className="mt-4 text-lg text-gray-300">
-              Newspaper & Magazine Advertising Specialist — with additional services in Billboards, TV, Radio, Railways & Metro Station Advertising.
+            <p className="mt-6 text-lg text-gray-300">
+              Newspaper Ads • Classified Notices • Magazine Promotions • Bulk Printing
             </p>
 
-            <div className="mt-8 flex gap-4">
+            <p className="mt-3 text-gray-400">
+              Rohtak | Delhi NCR | Haryana <br />
+              <span className="italic">“Print ka power, jo log bharosa karte hain”</span>
+            </p>
+
+            {/* CTA BUTTONS */}
+            <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#contact"
-                className="inline-block bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold shadow"
+                href="tel:+918708630236"
+                className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
               >
-                Get a Print Media Quote
+                📞 Call Now
               </a>
 
               <a
-                href={`https://wa.me/${PHONE_1.replace('+', '')}`}
+                href="https://wa.me/918708630236"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block border border-gray-400 px-6 py-3 rounded-lg text-gray-200"
+                className="border border-yellow-500 text-yellow-400 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-black transition"
               >
-                Chat on WhatsApp
+                💬 WhatsApp Booking
               </a>
             </div>
-
-            <ul className="mt-6 text-gray-400 space-y-1">
-              <li>📍 Rohtak (Haryana)</li>
-              <li>📞 {PHONE_1} | {PHONE_2}</li>
-              <li>✉️ {EMAIL}</li>
-            </ul>
           </div>
 
-          {/* RIGHT SIDE */}
-          <div className="bg-gray-800/40 border border-gray-700 p-6 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4">Why Print Media Still Works</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>✔ High reach for targeted audiences</li>
-              <li>✔ Trusted & credible media (newspapers & magazines)</li>
-              <li>✔ Perfect for public notices, branding, promotions</li>
-              <li>✔ Works alongside Billboards, TV & Radio</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </header>
-  );
-}
-
-
-<section id="services">
-  <h2>Our Advertising Services</h2>
-
-  <article>
-    <h3>Print Media — Newspapers</h3>
-    <p>Classifieds, display & advertorial placements across national & regional newspapers. We handle ad design, booking, insertion & post-placement reports.</p>
-  </article>
-
-  <article>
-    <h3>Print Media — Magazines</h3>
-    <p>Magazine placements in targeted genres (business, lifestyle, regional). Full artworking & bleed-ready prints for premium placements.</p>
-  </article>
-
-  <article>
-    <h3>Outdoor Advertising — Billboards & Hoardings</h3>
-    <p>Strategic billboard locations, site booking, flex printing & installation. High-impact creatives for maximum visibility.</p>
-  </article>
-
-  <article>
-    <h3>TV & Radio Campaigns</h3>
-    <p>Scriptwriting, production coordination & media buying for local/regional TV and radio channels — end-to-end campaign management.</p>
-  </article>
-
-  <article>
-    <h3>Transit & Rail — Metro, Railway</h3>
-    <p>Railway platform ads, train interiors, metro panels & station branding. We manage approvals and large-format printing.</p>
-  </article>
-
-  <article>
-    <h3>Corporate & Event Collateral</h3>
-    <p>Brochures, flyers, banners, standees, and event backdrops — design to print delivery.</p>
-  </article>
-</section>
-
-<section id="trust">
-  <h3>Trusted in Rohtak — Why clients choose us</h3>
-  <ul>
-    <li>Fast booking & guaranteed placement with newspapers & magazines</li>
-    <li>On-ground installation for outdoor campaigns</li>
-    <li>Production & print quality check before dispatch</li>
-    <li>Transparent pricing, insertion reports & proofs</li>
-    <li>Local approvals & permits handling for transit campaigns</li>
-  </ul>
-</section>
-
-
-function Portfolio(){
-  return (
-    <section id="portfolio" className="py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-6">Portfolio</h2>
-        <p className="text-gray-600">Sample designs w (recommended size: 1200×800).</p>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {[1,2,3].map(i => (
-            <div key={i} className="h-48 bg-gradient-to-br from-gray-800 to-gray-700 rounded-lg flex items-center justify-center text-gray-300">Placeholder Image</div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function Pricing(){
-  const packs = [
-    {title: 'Classified Quick', price: '₹999*', desc: 'Name change / short notice — local papers.'},
-    {title: 'Newspaper Starter', price: '₹3,999*', desc: 'Display ad in regional newspapers.'},
-    {title: 'Bulk Print Pack', price: 'Custom', desc: 'Large volume pamphlets & inserts.'},
-  ]
-
-  return (
-    <section id="pricing" className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-6">Pricing & Packages</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {packs.map((p,i)=> (
-            <div key={i} className="bg-white rounded-lg p-6 border border-gray-200">
-              <h3 className="text-xl font-semibold">{p.title}</h3>
-              <p className="mt-2 text-gray-600">{p.desc}</p>
-              <div className="mt-4 text-2xl font-bold">{p.price}</div>
-              <div className="mt-4">
-                <a href="#contact" className="inline-block px-4 py-2 border rounded">Enquire</a>
-              </div>
+          {/* RIGHT IMAGE PLACEHOLDER */}
+          <div className="relative">
+            <div className="h-80 md:h-96 rounded-xl border border-yellow-500/40 flex items-center justify-center text-gray-400">
+              {/* IMAGE WILL COME HERE */}
+              <span className="text-center">
+                Newspaper / Classified<br />Ad Mockup Image
+              </span>
             </div>
-          ))}
+          </div>
+
         </div>
-        <p className="text-sm text-gray-500 mt-4">* Prices indicative. Final rates vary by paper, size & date.</p>
-      </div>
-    </section>
-  )
-}
+      </section>
 
-function Contact() {
-  // Mailto form — builds a mailto link so the user's email client opens with prefilled content.
-  const handleMailTo = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const form = e.currentTarget; // ✅ use currentTarget, properly typed
-
-    // ✅ safely access form inputs using 'elements'
-    const name = (form.elements.namedItem('name') as HTMLInputElement)?.value.trim() || '';
-    const phone = (form.elements.namedItem('phone') as HTMLInputElement)?.value.trim() || '';
-    const service = (form.elements.namedItem('service') as HTMLInputElement)?.value.trim() || '';
-    const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value.trim() || '';
-
-    const subject = encodeURIComponent(`${AGENCY} - New enquiry from ${name || 'Prospect'}`);
-    const bodyLines = [
-      `Name: ${name}`,
-      `Phone: ${phone}`,
-      `Service: ${service}`,
-      `Message: ${message}`,
-    ];
-    const body = encodeURIComponent(bodyLines.join('\n'));
-
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-  };
-
-  return (
-    <section id="contact" className="py-16 bg-gray-900 text-white">
-      <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8 text-center">Contact Us</h2>
-        <form onSubmit={handleMailTo} className="grid gap-4">
-          <input type="text" name="name" placeholder="Your Name" className="p-3 rounded text-black" required />
-          <input type="tel" name="phone" placeholder="Phone Number" className="p-3 rounded text-black" required />
-          <input type="text" name="service" placeholder="Service Interested In" className="p-3 rounded text-black" required />
-          <textarea name="message" placeholder="Your Message" className="p-3 rounded text-black" required />
-          <button type="submit" className="bg-blue-600 hover:bg-blue-700 p-3 rounded text-white font-semibold">
-            Send Enquiry
-          </button>
-        </form>
-      </div>
-    </section>
-  );
-}
-
-
-function Footer(){
-  return (
-    <footer className="bg-gray-800 text-gray-300 py-8">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <div>
-          <div className="font-bold">{AGENCY}</div>
-          <div className="text-sm">{TAGLINE} • {LOCATION}</div>
-        </div>
-        <div className="text-sm">© {new Date().getFullYear()} {AGENCY}. All rights reserved.</div>
-      </div>
-    </footer>
-  )
-}
-
-function WhatsAppFloating(){
-  return (
-    <a aria-label="WhatsApp" href={`https://wa.me/${PHONE_1.replace('+','')}?text=${encodeURIComponent('Hello AD KING ADVERTISERS, I want to enquire about...')}`} target="_blank" rel="noreferrer" className="fixed bottom-6 right-6 z-50 shadow-lg rounded-full">
-      <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center text-white font-bold border-2 border-white">WA</div>
-    </a>
-  )
-}
-
-export default function App(){
-  return (
-    <div className="min-h-screen font-sans bg-gray-50 text-gray-900">
-      <Hero />
-      <main>
-        <Services />
-        <Portfolio />
-        <Pricing />
-        <Contact />
-      </main>
-      <Footer />
-      <WhatsAppFloating />
+      {/* ================= TRUST STRIP ================= */}
+<section className="bg-zinc-900 py-8 border-t border-yellow-500/30">
+  <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div>
+      <p className="text-yellow-500 text-2xl font-bold">10+</p>
+      <p className="text-gray-300 text-sm">Years Media Network</p>
     </div>
-  )
-}
+    <div>
+      <p className="text-yellow-500 text-2xl font-bold">Govt & Bank</p>
+      <p className="text-gray-300 text-sm">Notice Experts</p>
+    </div>
+    <div>
+      <p className="text-yellow-500 text-2xl font-bold">Same Day</p>
+      <p className="text-gray-300 text-sm">Ad Booking</p>
+    </div>
+    <div>
+      <p className="text-yellow-500 text-2xl font-bold">NCR</p>
+      <p className="text-gray-300 text-sm">Wide Coverage</p>
+    </div>
+  </div>
+</section>
 
+{/* ================= SERVICES SECTION ================= */}
+<section className="bg-black py-20 px-6">
+  <div className="max-w-6xl mx-auto">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-center">
+      Our <span className="text-yellow-500">Services</span>
+    </h2>
+
+    <p className="text-center text-gray-400 mt-4 max-w-3xl mx-auto">
+      Hum aapke brand, notice ya message ko sahi jagah aur sahi logon tak
+      pahunchate hain — print media ke trusted power ke saath.
+    </p>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+
+      {/* Service Card 1 */}
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <div className="h-32 mb-4 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded">
+          Newspaper Ad Image
+        </div>
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Newspaper Advertisements
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          Display ads, inserts aur front-page placements —
+          regional & national newspapers me.
+        </p>
+      </div>
+
+      {/* Service Card 2 */}
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <div className="h-32 mb-4 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded">
+          Classified Image
+        </div>
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Classified Advertisements
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          Name Change, Property, Bank aur Government notices —
+          drafting se publishing tak.
+        </p>
+      </div>
+
+      {/* Service Card 3 */}
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <div className="h-32 mb-4 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded">
+          Govt Notice Image
+        </div>
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Govt & Bank Notices
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          Tender ads, public notices aur legal advertisements —
+          bilkul official format me.
+        </p>
+      </div>
+
+      {/* Service Card 4 */}
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <div className="h-32 mb-4 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded">
+          Printing Image
+        </div>
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Pamphlet & Bulk Printing
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          Flyer design, pamphlets aur high-volume printing —
+          fast delivery ke saath.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{/* ================= AD SIZES & FORMATS ================= */}
+<section className="bg-zinc-950 py-20 px-6 border-t border-yellow-500/20">
+  <div className="max-w-6xl mx-auto">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-center">
+      Ad <span className="text-yellow-500">Sizes & Formats</span>
+    </h2>
+
+    <p className="text-center text-gray-400 mt-4 max-w-3xl mx-auto">
+      Newspaper ad ka sahi size choose karna bohot zaroori hota hai.
+      Agar size galat hua, to reach ya budget dono waste ho sakte hain.
+      Isliye hum aapko **honest guidance** dete hain.
+    </p>
+
+    <div className="grid md:grid-cols-4 gap-6 mt-14 text-center">
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <p className="text-yellow-500 text-xl font-bold">Full Page</p>
+        <p className="text-gray-400 mt-2 text-sm">
+          Maximum visibility, brand impact ke liye best
+        </p>
+      </div>
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <p className="text-yellow-500 text-xl font-bold">Half Page</p>
+        <p className="text-gray-400 mt-2 text-sm">
+          Balanced budget aur strong reach
+        </p>
+      </div>
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <p className="text-yellow-500 text-xl font-bold">Quarter Page</p>
+        <p className="text-gray-400 mt-2 text-sm">
+          Local promotions aur offers ke liye
+        </p>
+      </div>
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <p className="text-yellow-500 text-xl font-bold">Classified</p>
+        <p className="text-gray-400 mt-2 text-sm">
+          Name change, property & legal notices
+        </p>
+      </div>
+
+    </div>
+
+    {/* CTA */}
+    <div className="mt-16 bg-black border border-yellow-500/40 rounded-2xl p-10 text-center">
+      <h3 className="text-2xl md:text-3xl font-bold">
+        Confused which ad size is right for you?
+      </h3>
+      <p className="text-gray-400 mt-3">
+        Call ya WhatsApp karo — hum aapko best option suggest karenge,
+        bina koi pressure ke.
+      </p>
+
+      <div className="mt-8 flex justify-center gap-4 flex-wrap">
+        <a
+          href="tel:+918708630236"
+          className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+        >
+          📞 Call Now
+        </a>
+
+        <a
+          href="https://wa.me/918708630236"
+          target="_blank"
+          rel="noreferrer"
+          className="border border-yellow-500 text-yellow-400 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-black transition"
+        >
+          💬 WhatsApp Now
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{/* ================= WHY AD KING ADVERTISERS ================= */}
+<section className="bg-black py-20 px-6 border-t border-yellow-500/20">
+  <div className="max-w-6xl mx-auto">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-center">
+      Why <span className="text-yellow-500">Ad King Advertisers</span>
+    </h2>
+
+    <p className="text-center text-gray-400 mt-4 max-w-3xl mx-auto">
+      Sirf ad publish karna hi kaafi nahi hota — sahi guidance, correct format
+      aur trusted media network zaroori hota hai.  
+      Yahin par **Ad King Advertisers** alag stand karta hai.
+    </p>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Trusted Media Network
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          Regional aur national newspapers ke saath strong tie-ups —
+          jisse aapko milta hai maximum reach aur genuine visibility.
+        </p>
+      </div>
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Govt & Bank Notice Experts
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          Tender ads, public notices aur legal advertisements —
+          bilkul approved aur official formats ke saath.
+        </p>
+      </div>
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Honest Pricing
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          No hidden charges, no confusion.  
+          Jo rate bataya jaata hai, wahi final hota hai.
+        </p>
+      </div>
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Fast Turnaround
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          Same-day booking aur quick approvals —
+          jab time critical ho, hum deliver karte hain.
+        </p>
+      </div>
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Local Expertise
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          Rohtak aur NCR market ka deep understanding —
+          jo ads ko zyada effective banata hai.
+        </p>
+      </div>
+
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <h3 className="text-xl font-semibold text-yellow-400">
+          End-to-End Support
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          Drafting se leke publishing tak —
+          aapko kahin bhaagna nahi padta.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{/* ================= PORTFOLIO / SAMPLE ADS ================= */}
+<section className="bg-zinc-950 py-20 px-6 border-t border-yellow-500/20">
+  <div className="max-w-6xl mx-auto">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-center">
+      Sample <span className="text-yellow-500">Advertisements</span>
+    </h2>
+
+    <p className="text-center text-gray-400 mt-4 max-w-3xl mx-auto">
+      Neeche kuch sample ads dikhaye gaye hain jo format, layout aur
+      professional presentation ko represent karte hain.
+      Actual ads newspaper guidelines ke according customize kiye jaate hain.
+    </p>
+
+    <div className="grid md:grid-cols-3 gap-8 mt-16">
+
+      {/* Sample 1 */}
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <div className="h-40 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded mb-4">
+          Newspaper Display Ad
+        </div>
+        <h3 className="text-lg font-semibold text-yellow-400">
+          Newspaper Display Advertisement
+        </h3>
+        <p className="text-gray-400 text-sm mt-2">
+          Full page / half page / quarter page layouts —
+          brand promotions ke liye ideal.
+        </p>
+      </div>
+
+      {/* Sample 2 */}
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <div className="h-40 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded mb-4">
+          Classified Notice Sample
+        </div>
+        <h3 className="text-lg font-semibold text-yellow-400">
+          Classified & Legal Notices
+        </h3>
+        <p className="text-gray-400 text-sm mt-2">
+          Name change, property, bank aur government notices —
+          approved formats ke saath.
+        </p>
+      </div>
+
+      {/* Sample 3 */}
+      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
+        <div className="h-40 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded mb-4">
+          Pamphlet / Flyer Sample
+        </div>
+        <h3 className="text-lg font-semibold text-yellow-400">
+          Pamphlet & Flyer Designs
+        </h3>
+        <p className="text-gray-400 text-sm mt-2">
+          Promotional pamphlets aur flyers —
+          bulk printing ke liye optimized designs.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{/* ================= FINAL CTA ================= */}
+<section className="bg-black py-20 px-6 border-t border-yellow-500/30">
+  <div className="max-w-5xl mx-auto text-center">
+
+    <h2 className="text-3xl md:text-4xl font-bold">
+      Need to Publish an <span className="text-yellow-500">Ad Today?</span>
+    </h2>
+
+    <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+      Newspaper ads, classified notices ya bulk printing —
+      same-day booking aur expert guidance ke liye
+      abhi contact karein.
+    </p>
+
+    <div className="mt-8 flex justify-center gap-4 flex-wrap">
+      <a
+        href="tel:+918708630236"
+        className="bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+      >
+        📞 Call Now
+      </a>
+
+      <a
+        href="https://wa.me/918708630236"
+        target="_blank"
+        rel="noreferrer"
+        className="border border-yellow-500 text-yellow-400 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-black transition"
+      >
+        💬 WhatsApp Now
+      </a>
+    </div>
+
+  </div>
+</section>
+
+{/* ================= CONTACT SECTION ================= */}
+<section className="bg-zinc-950 py-16 px-6">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+
+    <div>
+      <h3 className="text-2xl font-bold text-yellow-500">
+        Contact Ad King Advertisers
+      </h3>
+      <p className="text-gray-400 mt-4">
+        Hum Rohtak aur Delhi NCR me print media advertising services
+        provide karte hain — newspaper, magazine, classified aur bulk printing.
+      </p>
+
+      <div className="mt-6 space-y-3 text-gray-300">
+        <p>📞 +91 8708630236</p>
+        <p>📞 +91 9671798170</p>
+        <p>✉️ adkingrohtak@gmail.com</p>
+        <p>📍 Rohtak, Haryana</p>
+      </div>
+    </div>
+
+    <div className="border border-yellow-500/30 rounded-xl p-6">
+      <h4 className="text-xl font-semibold text-yellow-400">
+        Quick Enquiry
+      </h4>
+      <p className="text-gray-400 text-sm mt-2">
+        Call ya WhatsApp karein — hum aapko turant guide karenge.
+      </p>
+
+      <a
+        href="https://wa.me/918708630236"
+        target="_blank"
+        rel="noreferrer"
+        className="mt-6 inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+      >
+        💬 Start WhatsApp Chat
+      </a>
+    </div>
+
+  </div>
+</section>
+
+{/* ================= FOOTER ================= */}
+<footer className="bg-black py-8 px-6 border-t border-yellow-500/20">
+  <div className="max-w-6xl mx-auto text-center text-gray-400 text-sm">
+
+    <p className="font-semibold text-white">
+      Ad King Advertisers
+    </p>
+
+    <p className="mt-1">
+      Print Media Advertising Agency — Newspaper Ads • Classified Notices • Magazine Ads • Bulk Printing
+    </p>
+
+    <p className="mt-2">
+      Serving Rohtak | Delhi NCR | Haryana
+    </p>
+
+    <p className="mt-4 text-xs">
+      © {new Date().getFullYear()} Ad King Advertisers. All Rights Reserved.
+    </p>
+
+  </div>
+</footer>
+
+</div>
+);
+}
