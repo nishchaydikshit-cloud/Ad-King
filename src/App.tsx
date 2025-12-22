@@ -5,57 +5,57 @@ export default function App() {
     <div className="bg-black text-white">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
+      <section className="relative min-h-screen bg-black flex items-center">
+  
+  {/* PNG IMAGE LAYER */}
+  <img
+    src="/src/assets/hero-bg.png"
+    alt="Newspaper Advertising Background"
+    className="absolute right-0 top-0 h-full w-auto max-w-[55%] object-contain opacity-90"
+  />
 
-          {/* LEFT CONTENT */}
-          <div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              India’s Trusted <span className="text-yellow-500">Print Media</span><br />
-              Advertising Agency
-            </h1>
+  {/* SOFT DARK GRADIENT FOR TEXT READABILITY */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/40"></div>
 
-            <p className="mt-6 text-lg text-gray-300">
-              Newspaper Ads • Classified Notices • Magazine Promotions • Bulk Printing
-            </p>
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+    <div className="max-w-2xl">
 
-            <p className="mt-3 text-gray-400">
-              Rohtak | Delhi NCR | Haryana <br />
-              <span className="italic">“Print ka power, jo log bharosa karte hain”</span>
-            </p>
+      <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+        India’s Trusted <br />
+        <span className="text-yellow-400">Print Media</span> <br />
+        Advertising Agency
+      </h1>
 
-            {/* CTA BUTTONS */}
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="tel:+918708630236"
-                className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
-              >
-                📞 Call Now
-              </a>
+      <p className="mt-6 text-gray-300 text-lg">
+        Newspaper Ads • Classified Notices • Magazine Promotions • Bulk Printing
+      </p>
 
-              <a
-                href="https://wa.me/918708630236"
-                target="_blank"
-                rel="noreferrer"
-                className="border border-yellow-500 text-yellow-400 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-black transition"
-              >
-                💬 WhatsApp Booking
-              </a>
-            </div>
-          </div>
+      <p className="mt-2 text-gray-400">
+        Rohtak | Delhi NCR | Haryana
+      </p>
 
-          {/* RIGHT IMAGE PLACEHOLDER */}
-          <div className="relative">
-            <div className="h-80 md:h-96 rounded-xl border border-yellow-500/40 flex items-center justify-center text-gray-400">
-              {/* IMAGE WILL COME HERE */}
-              <span className="text-center">
-                Newspaper / Classified<br />Ad Mockup Image
-              </span>
-            </div>
-          </div>
+      <div className="mt-8 flex flex-wrap gap-4">
+        <a
+          href="tel:+918708630236"
+          className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition"
+        >
+          📞 Call Now
+        </a>
 
-        </div>
-      </section>
+        <a
+          href="https://wa.me/918708630236"
+          target="_blank"
+          className="border border-yellow-400 text-yellow-400 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 hover:text-black transition"
+        >
+          💬 WhatsApp Booking
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* ================= TRUST STRIP ================= */}
 <section className="bg-zinc-900 py-8 border-t border-yellow-500/30">
