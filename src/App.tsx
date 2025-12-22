@@ -122,79 +122,89 @@ export default function App() {
 </section>
 
 {/* ================= SERVICES SECTION ================= */}
-<section className="bg-black py-20 px-6">
-  <div className="max-w-6xl mx-auto">
-
-    <h2 className="text-3xl md:text-4xl font-bold text-center">
-      Our <span className="text-yellow-500">Services</span>
+<section id="services" className="bg-black py-20 px-6">
+  <div className="max-w-6xl mx-auto text-center mb-14">
+    <h2 className="text-4xl font-bold text-white">
+      Our <span className="text-yellow-400">Services</span>
     </h2>
-
-    <p className="text-center text-gray-400 mt-4 max-w-3xl mx-auto">
-      Hum aapke brand, notice ya message ko sahi jagah aur sahi logon tak
-      pahunchate hain — print media ke trusted power ke saath.
+    <p className="text-gray-400 mt-4">
+      Complete print media advertising solutions under one roof
     </p>
+  </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
 
-      {/* Service Card 1 */}
-      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
-        <div className="h-32 mb-4 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded">
-          Newspaper Ad Image
-        </div>
+    {/* Newspaper Ads */}
+    <div className="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500 transition">
+      <img
+        src="/src/assets/service-newspaper.png"
+        alt="Newspaper Advertising"
+        className="w-full h-52 object-cover"
+      />
+      <div className="p-6 text-left">
         <h3 className="text-xl font-semibold text-yellow-400">
           Newspaper Advertisements
         </h3>
         <p className="text-gray-400 mt-2 text-sm">
-          Display ads, inserts aur front-page placements —
-          regional & national newspapers me.
+          Display ads, inserts and brand promotions in leading national and local newspapers.
         </p>
       </div>
+    </div>
 
-      {/* Service Card 2 */}
-      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
-        <div className="h-32 mb-4 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded">
-          Classified Image
-        </div>
+    {/* Classified Notices */}
+    <div className="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500 transition">
+      <img
+        src="/src/assets/service-classified.png"
+        alt="Classified Notices"
+        className="w-full h-52 object-cover"
+      />
+      <div className="p-6 text-left">
         <h3 className="text-xl font-semibold text-yellow-400">
-          Classified Advertisements
+          Classified Notices
         </h3>
         <p className="text-gray-400 mt-2 text-sm">
-          Name Change, Property, Bank aur Government notices —
-          drafting se publishing tak.
+          Name change, property, legal, matrimonial and public classified advertisements.
         </p>
       </div>
+    </div>
 
-      {/* Service Card 3 */}
-      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
-        <div className="h-32 mb-4 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded">
-          Govt Notice Image
-        </div>
+    {/* Bulk Printing */}
+    <div className="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500 transition">
+      <img
+        src="/src/assets/service-printing.png"
+        alt="Bulk Printing Services"
+        className="w-full h-52 object-cover"
+      />
+      <div className="p-6 text-left">
+        <h3 className="text-xl font-semibold text-yellow-400">
+          Bulk Printing & Pamphlets
+        </h3>
+        <p className="text-gray-400 mt-2 text-sm">
+          High-quality bulk printing solutions for flyers, pamphlets and promotional materials.
+        </p>
+      </div>
+    </div>
+
+    {/* Govt & Bank Notices */}
+    <div className="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500 transition md:col-span-3 lg:col-span-1">
+      <img
+        src="/src/assets/service-govt-bank.png"
+        alt="Government and Bank Notices"
+        className="w-full h-52 object-cover"
+      />
+      <div className="p-6 text-left">
         <h3 className="text-xl font-semibold text-yellow-400">
           Govt & Bank Notices
         </h3>
         <p className="text-gray-400 mt-2 text-sm">
-          Tender ads, public notices aur legal advertisements —
-          bilkul official format me.
+          Government tenders, bank auction notices, statutory public notices and official advertisements.
         </p>
       </div>
-
-      {/* Service Card 4 */}
-      <div className="border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-500 transition">
-        <div className="h-32 mb-4 flex items-center justify-center text-gray-400 border border-yellow-500/20 rounded">
-          Printing Image
-        </div>
-        <h3 className="text-xl font-semibold text-yellow-400">
-          Pamphlet & Bulk Printing
-        </h3>
-        <p className="text-gray-400 mt-2 text-sm">
-          Flyer design, pamphlets aur high-volume printing —
-          fast delivery ke saath.
-        </p>
-      </div>
-
     </div>
+
   </div>
 </section>
+
 
 {/* ================= AD SIZES & FORMATS ================= */}
 <section className="bg-zinc-950 py-20 px-6 border-t border-yellow-500/20">
