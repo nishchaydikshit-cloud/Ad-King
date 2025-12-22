@@ -4,8 +4,50 @@ export default function App() {
   return (
     <div className="bg-black text-white">
 
+      <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur border-b border-yellow-500/20">
+  <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    {/* LOGO */}
+    <div className="flex items-center gap-2">
+      <span className="text-yellow-400 text-xl font-bold">
+        👑 AD KING
+      </span>
+      <span className="text-white text-sm tracking-wide">
+        ADVERTISERS
+      </span>
+    </div>
+
+    {/* NAV LINKS */}
+    <nav className="hidden md:flex items-center gap-8 text-sm text-gray-300">
+      <a href="#home" className="hover:text-yellow-400 transition">
+        Home
+      </a>
+      <a href="#services" className="hover:text-yellow-400 transition">
+        Services
+      </a>
+      <a href="#portfolio" className="hover:text-yellow-400 transition">
+        Ads Portfolio
+      </a>
+      <a href="#contact" className="hover:text-yellow-400 transition">
+        Contact
+      </a>
+    </nav>
+
+    {/* CTA BUTTON */}
+    <a
+      href="https://wa.me/918708630236"
+      target="_blank"
+      className="hidden md:inline-block bg-yellow-400 text-black px-5 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-300 transition"
+    >
+      Get in Touch
+    </a>
+
+  </div>
+</header>
+
+
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-screen bg-black flex items-center">
+      <section className="relative min-h-screen bg-black flex items-center pt-28">
   
   {/* PNG IMAGE LAYER */}
   <img
