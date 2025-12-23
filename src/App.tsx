@@ -1,4 +1,4 @@
-import bgimg from "./assets/hero-bg.png";
+import heroBg from "./assets/hero-bg.png";
 import newspaperImg from "./assets/service-newspaper.png";
 import classifiedImg from "./assets/service-classified.png";
 import printingImg from "./assets/service-printing.png";
@@ -52,53 +52,38 @@ export default function App() {
 
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-screen bg-black flex items-center pt-28">
-  
-  {/* PNG IMAGE LAYER */}
-  <img
-    src={bgimg}
-    alt="Newspaper Advertising Background"
-    className="absolute right-0 top-0 h-full w-auto max-w-[55%] object-contain opacity-90"
-  />
+      {/* HERO SECTION */}
+<section
+  className="relative min-h-screen flex items-center"
+  style={{
+    backgroundImage: `url(${heroBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/70"></div>
 
-  {/* SOFT DARK GRADIENT FOR TEXT READABILITY */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/40"></div>
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6">
+    <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+      India’s Trusted <br />
+      <span className="text-yellow-400">Print Media</span> <br />
+      Advertising Agency
+    </h1>
 
-  {/* CONTENT */}
-  <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-    <div className="max-w-2xl">
+    <p className="mt-6 text-gray-300 max-w-xl">
+      Newspaper Ads • Classified Notices • Magazine Promotions • Bulk Printing
+    </p>
 
-      <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-        India’s Trusted <br />
-        <span className="text-yellow-400">Print Media</span> <br />
-        Advertising Agency
-      </h1>
-
-      <p className="mt-6 text-gray-300 text-lg">
-        Newspaper Ads • Classified Notices • Magazine Promotions • Bulk Printing
-      </p>
-
-      <p className="mt-2 text-gray-400">
-        Rohtak | Delhi NCR | Haryana
-      </p>
-
-      <div className="mt-8 flex flex-wrap gap-4">
-        <a
-          href="tel:+918708630236"
-          className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition"
-        >
-          📞 Call Now
-        </a>
-
-        <a
-          href="https://wa.me/918708630236"
-          target="_blank"
-          className="border border-yellow-400 text-yellow-400 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 hover:text-black transition"
-        >
-          💬 WhatsApp Booking
-        </a>
-      </div>
-
+    <div className="mt-8 flex gap-4">
+      <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold">
+        Call Now
+      </button>
+      <button className="border border-yellow-400 text-yellow-400 px-6 py-3 rounded-lg">
+        WhatsApp Booking
+      </button>
     </div>
   </div>
 </section>
