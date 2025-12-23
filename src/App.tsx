@@ -66,7 +66,7 @@ export default function App() {
   <div className="absolute inset-0 bg-black/70"></div>
 
   {/* Content */}
-  <div className="relative z-10 max-w-7xl mx-auto px-6">
+  <div className="relative z-10 max-w-7xl ml-0 px-10">
     <h1 className="text-5xl md:text-6xl font-bold leading-tight">
       India’s Trusted <br />
       <span className="text-yellow-400">Print Media</span> <br />
