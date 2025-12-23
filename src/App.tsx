@@ -1,3 +1,4 @@
+import bgimg from "./assets/hero-bg.png";
 import newspaperImg from "./assets/service-newspaper.png";
 import classifiedImg from "./assets/service-classified.png";
 import printingImg from "./assets/service-printing.png";
@@ -55,7 +56,7 @@ export default function App() {
   
   {/* PNG IMAGE LAYER */}
   <img
-    src="/src/assets/hero-bg.png"
+    src={bgimg}
     alt="Newspaper Advertising Background"
     className="absolute right-0 top-0 h-full w-auto max-w-[55%] object-contain opacity-90"
   />
