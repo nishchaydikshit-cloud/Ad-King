@@ -54,19 +54,19 @@ export default function App() {
       {/* ================= HERO SECTION ================= */}
       {/* HERO SECTION */}
 <section
-  className="relative min-h-screen flex items-center"
+  className="relative min-h-screen flex items-center justify-start"
   style={{
     backgroundImage: `url(${heroBg})`,
     backgroundSize: "cover",
-    backgroundPosition: "center",
+    backgroundPosition: "right center",
     backgroundRepeat: "no-repeat",
   }}
 >
-  {/* Dark overlay */}
+  {/* overlay */}
   <div className="absolute inset-0 bg-black/70"></div>
 
-  {/* Content */}
-  <div className="relative z-10 max-w-7xl ml-0 px-10">
+  {/* content */}
+  <div className="relative z-10 max-w-7xl px-10">
     <h1 className="text-5xl md:text-6xl font-bold leading-tight">
       India’s Trusted <br />
       <span className="text-yellow-400">Print Media</span> <br />
