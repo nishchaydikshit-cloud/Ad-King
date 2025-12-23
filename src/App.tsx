@@ -1,3 +1,7 @@
+import newspaperImg from "./assets/service-newspaper.png";
+import classifiedImg from "./assets/service-classified.png";
+import printingImg from "./assets/service-printing.png";
+import govtImg from "./assets/service-govt-bank.png";
 
 
 export default function App() {
@@ -137,7 +141,7 @@ export default function App() {
     {/* Newspaper Ads */}
     <div className="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500 transition">
       <img
-        src="/src/assets/service-newspaper.png"
+        src={newspaperImg}
         alt="Newspaper Advertising"
         className="w-full h-52 object-cover"
       />
@@ -154,7 +158,7 @@ export default function App() {
     {/* Classified Notices */}
     <div className="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500 transition">
       <img
-        src="/src/assets/service-classified.png"
+        src={classifiedImg}
         alt="Classified Notices"
         className="w-full h-52 object-cover"
       />
@@ -171,7 +175,7 @@ export default function App() {
     {/* Bulk Printing */}
     <div className="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500 transition">
       <img
-        src="/src/assets/service-printing.png"
+        src={printingImg}
         alt="Bulk Printing Services"
         className="w-full h-52 object-cover"
       />
@@ -188,7 +192,7 @@ export default function App() {
     {/* Govt & Bank Notices */}
     <div className="bg-zinc-900 rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500 transition md:col-span-3 lg:col-span-1">
       <img
-        src="/src/assets/service-govt-bank.png"
+        src={govtImg}
         alt="Government and Bank Notices"
         className="w-full h-52 object-cover"
       />
