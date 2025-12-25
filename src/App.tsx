@@ -54,9 +54,9 @@ export default function App() {
       {/* ================= HERO SECTION ================= */}
       {/* HERO SECTION */}
 <section
-  className="relative min-h-screen flex items-center justify-start"
+  className="relative min-h-screen flex items-right center justify-start"
   style={{
-    backgroundImage: `url(${herobg})`,
+    backgroundImage: `url(${heroBg})`,
     backgroundSize: "cover",
     backgroundPosition: "right center",
     backgroundRepeat: "no-repeat",
